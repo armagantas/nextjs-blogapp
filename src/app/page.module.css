@@ -23,3 +23,18 @@
   height: 500px;
   object-fit: cover;
 }
+
+.desc {
+  font-style: 24px;
+  font-weight: 300;
+}
+
+.button {
+  padding: 20px;
+  cursor: pointer;
+  background-color: #53c28b;
+  border: none;
+  border-radius: 5px;
+  width: max-content;
+  color: white;
+}
