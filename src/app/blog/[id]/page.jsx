@@ -9,7 +9,7 @@ async function getData(id) {
   });
 
   if (!res.ok) {
-    return notFound();
+    throw new Error("Failed to fetching data");
   }
 
   return res.json();
