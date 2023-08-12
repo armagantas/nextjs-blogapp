@@ -20,7 +20,7 @@ const postSchema = new Schema(
       type: String,
       required: true,
     },
-    userName: {
+    username: {
       type: String,
       required: true,
     },
@@ -28,4 +28,5 @@ const postSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Post", postSchema);
+//If the Post collection does not exist create a new one.
+export default mongoose.models.Post || mongoose.model("PostModel", postSchema);
