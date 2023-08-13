@@ -26,4 +26,7 @@ const commandModal = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.models.commandModal || commandModal;
+const Command =
+  mongoose.models.Command || mongoose.model("Command", commandModal);
+
+export default Command;
