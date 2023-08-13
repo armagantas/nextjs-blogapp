@@ -21,6 +21,6 @@ const userSchema = new Schema(
   },
   { timestamps: true }
 );
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 
-//If the User collection does not exist create a new one.
-export default mongoose.models.User || mongoose.model("UserModel", userSchema);
+export default User;

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const commandModal = new mongoose.Schema(
+const commandSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -27,6 +27,6 @@ const commandModal = new mongoose.Schema(
 );
 
 const Command =
-  mongoose.models.Command || mongoose.model("Command", commandModal);
+  mongoose.models.Command || mongoose.model("Command", commandSchema);
 
 export default Command;
